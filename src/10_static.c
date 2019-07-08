@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
+static uint32_t total = 0;
+
 uint32_t sum(uint32_t number) {
-	static uint32_t total = 0;
 	total += number;
 	return total;
 }
