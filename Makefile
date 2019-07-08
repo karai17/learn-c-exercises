@@ -24,4 +24,9 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
-.PHONY: 01_hello-world 02_vars-types 03_arrays
+04_multi-arrays: $(SDIR)/04_multi-arrays.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+.PHONY: 01_hello-world 02_vars-types 03_arrays 04_multi-arrays
