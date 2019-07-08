@@ -39,6 +39,26 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
+07_for-loops: $(SDIR)/07_for-loops.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+08_while-loops: $(SDIR)/08_while-loops.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+09_functions: $(SDIR)/09_functions.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+10_static: $(SDIR)/10_static.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
 .PHONY:
 	01_hello-world
 	02_vars-types
@@ -46,3 +66,7 @@ SDIR = ./src
 	04_multi-arrays
 	05_conditions
 	06_strings
+	07_for-loops
+	08_while-loops
+	09_functions
+	10_static
