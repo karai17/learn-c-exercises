@@ -29,4 +29,20 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
-.PHONY: 01_hello-world 02_vars-types 03_arrays 04_multi-arrays
+05_conditions: $(SDIR)/05_conditions.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+06_strings: $(SDIR)/06_strings.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+.PHONY:
+	01_hello-world
+	02_vars-types
+	03_arrays
+	04_multi-arrays
+	05_conditions
+	06_strings
