@@ -64,5 +64,10 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
+12_structs: $(SDIR)/12_structs.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
 .PHONY:
-	01_hello-world 02_vars-types 03_arrays 04_multi-arrays 05_conditions 06_strings 07_for-loops 08_while-loops 09_functions 10_static 11_pointers
+	01_hello-world 02_vars-types 03_arrays 04_multi-arrays 05_conditions 06_strings 07_for-loops 08_while-loops 09_functions 10_static 11_pointers 12_structs
