@@ -1,6 +1,6 @@
 # Compiler information
 CC    := x86_64-w64-mingw32-gcc
-CFLAGS = -Wall -Os
+CFLAGS = -Wall -Wextra -pedantic -Os
 
 # Project directories
 DDIR = ./dist
@@ -59,14 +59,10 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
+11_pointers: $(SDIR)/11_pointers.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
 .PHONY:
-	01_hello-world
-	02_vars-types
-	03_arrays
-	04_multi-arrays
-	05_conditions
-	06_strings
-	07_for-loops
-	08_while-loops
-	09_functions
-	10_static
+	01_hello-world 02_vars-types 03_arrays 04_multi-arrays 05_conditions 06_strings 07_for-loops 08_while-loops 09_functions 10_static 11_pointers
