@@ -11,7 +11,7 @@ int main() {
 	uint32_t n = 10;
 
 	// Points to previously created integer
-	uint32_t* p = &n;
+	uint32_t *p = &n;
 
 	// Increment n
 	*p += 1; // don't use ++ because it's stupid and ALSO due to operator precidence [(*p)++]

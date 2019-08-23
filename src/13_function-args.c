@@ -4,7 +4,7 @@
 // [[ p-> ]] is syntactic sugar for [[ (*p). ]]
 
 typedef struct {
-	char*    name;
+	char     *name;
 	uint32_t age;
 } person;
 

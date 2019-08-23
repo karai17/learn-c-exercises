@@ -6,9 +6,8 @@ void print_big(uint8_t number);
 
 int main() {
 	uint8_t array[] = { 1, 11, 2, 22, 3, 33 };
-	uint8_t i;
 
-	for (i = 0; i < 6; i++) {
+	for (uint32_t i = 0; i < 6; i++) {
 		print_big(array[i]);
 	}
 

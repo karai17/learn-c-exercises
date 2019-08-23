@@ -7,7 +7,7 @@
 */
 
 typedef struct {
-	char*    name;
+	char     *name;
 	uint32_t age;
 } person;
 

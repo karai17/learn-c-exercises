@@ -3,8 +3,6 @@
 
 int main() {
 	float average;
-	uint8_t i;
-	uint8_t k;
 	uint8_t grades[2][5];
 
 	// sizeof counts bytes, divide by bytes per cell to get number of cells
@@ -24,8 +22,9 @@ int main() {
 	grades[1][4] = 87;
 
 
-	for (i = 0; i < n; i++) {
-		average = 0;
+	for (uint32_t i = 0; i < n; i++) {
+		uint32_t k = 0;
+		average    = 0;
 
 		for (k = 0; k < m; k++) {
 			average += grades[i][k];

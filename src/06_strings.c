@@ -2,9 +2,9 @@
 #include <string.h>
 
 int main() {
-	char* first_name  = "John";
-	char  last_name[] = "Doe";
-	char  name[100];
+	char *first_name = "John";
+	char last_name[] = "Doe";
+	char name[100];
 
 	// Must use single quotes when dealing with individual characters
 	last_name[0] = 'B';
@@ -17,7 +17,7 @@ int main() {
 	}
 
 	name[0] = '\0';
-	strncat(name, first_name, 4);
+	strncat(name, first_name, 5);
 	strncat(name, last_name, 20);
 	printf("%s\n", name);
 
