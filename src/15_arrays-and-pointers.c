@@ -3,6 +3,9 @@
 #include <stdlib.h>
 
 int main() {
+
+	// Double star for double array syntax
+	// Use one less level of indirection for sizeof (if your pointer is 2+ stars, use 1 star. if 1 star, use no stars)
 	uint32_t **p = calloc(sizeof(uint32_t*), 3);
 
 	p[0] = calloc(sizeof(uint32_t), 1);
