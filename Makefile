@@ -84,4 +84,9 @@ SDIR = ./src
 	strip -s $(DDIR)/$@.exe
 	$(DDIR)/$@
 
-.PHONY: 01_hello-world 02_vars-types 03_arrays 04_multi-arrays 05_conditions 06_strings 07_for-loops 08_while-loops 09_functions 10_static 11_pointers 12_structs 13_function-args 14_dynamic-allocation 15_arrays-and-pointers
+16_recursion: $(SDIR)/16_recursion.c
+	$(CC) -o $(DDIR)/$@ $^ $(CFLAGS)
+	strip -s $(DDIR)/$@.exe
+	$(DDIR)/$@
+
+.PHONY: 01_hello-world 02_vars-types 03_arrays 04_multi-arrays 05_conditions 06_strings 07_for-loops 08_while-loops 09_functions 10_static 11_pointers 12_structs 13_function-args 14_dynamic-allocation 15_arrays-and-pointers 16_recursion
